@@ -4,7 +4,7 @@ import { Loader, Placeholder } from 'rsuite';
 import BatchDetails from './BatchDetails';
 
 
-function BatchList(){
+function BatchList(props){
     const [batches, setBatches] = useState([]);
     const [selectedBatch, setSelectedBatch] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -42,7 +42,6 @@ function BatchList(){
 
     return (
         <>
-        
         <div className=" ">
           <div className="w-48 bg-white z-0 relative top-[15vh] mx-10 text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4 ">
       <div 
@@ -79,7 +78,8 @@ function BatchList(){
         {selectedBatch && <BatchDetails batchName={selectedBatch} />}
       </div>
       </div>
-        </>
+        </> 
+      
     )
 }
 export default BatchList ;

@@ -1,6 +1,6 @@
-function Footer() {
+function Footer(props) {
     return (
-      <footer className="bg-gray-800 text-white py-6 mt-[25vh] relative  w-full">
+      <footer className={`bg-gray-800 text-white py-6 mt-[80vh] relative  w-full ${props.isLoggedIn ? "" : "mt-[80vh]"}`}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center mb-4">
             <div>
@@ -84,8 +84,8 @@ function Footer() {
           </div>
   
           <div className="text-center border-t border-gray-600 pt-4 text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Coding Age. All rights are not
-            reserved yet.
+            &copy; {new Date().getFullYear()} Coding Age. All rights will
+            reserve soon.
           </div>
         </div>
       </footer>
