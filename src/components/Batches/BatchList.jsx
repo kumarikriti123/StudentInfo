@@ -9,11 +9,7 @@ function BatchList(){
     const [selectedBatch, setSelectedBatch] = useState(null);
     const [loading, setLoading] = useState(true);
     const [response, setResponse] = useState('');
-    const [isOpen, setIsOpen] = useState(false);
     
-    const handleBatchesClick = () => {
-      setIsOpen(!isOpen);
-    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,12 +47,9 @@ function BatchList(){
           <div className="w-48 bg-white z-0 relative top-[15vh] mx-10 text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4 ">
       <div 
         className="py-3 text-xl font-bold mb-2 px-5 cursor-pointer"
-        onClick={handleBatchesClick} 
       >
         BATCHES
       </div>
-      
-      {isOpen && (
         <div className="mt-2 overflow-y-auto h-[50vh] scroll_batch">
           {loading ? (
             <div>
@@ -81,7 +74,6 @@ function BatchList(){
             <div className="text-gray-500">No batches available</div>
           )}
         </div>
-      )}
     </div>
     <div className="">
         {selectedBatch && <BatchDetails batchName={selectedBatch} />}
