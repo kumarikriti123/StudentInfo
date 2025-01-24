@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../SupabaseClient';
+import { useNavigate } from 'react-router-dom';
 
-function BatchDetails  ({ batchName })  {
+function BatchDetails({ batchName }) {
   const [batch, setBatch] = useState(null);
-
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBatchDetails = async () => {
@@ -47,19 +47,31 @@ function BatchDetails  ({ batchName })  {
     );
   }
 
-    return(
-        <>
-        <div className="bg-gray-200 rounded-xl text-black text-4xl p-5 ml-72  absolute top-[15vh]">
+  const navigateToQuestions = () => {
+    navigate('/subjects', { state: { batchName: batch.batch_name } });
+  };
+
+  return (
+    <>
+      <div className="bg-gray-200 rounded-xl text-black text-4xl p-5 ml-72 absolute top-[15vh]">
         {batch.batch_name}
         <div className="text-xl mt-5 mb-10">Time: {batch.batch_timing}</div>
-        <div className='bg-white p-4 rounded-xl mb-10'></div>
-        <button className='py-2 px-4  rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800'>Questions</button>
-        <button className='py-2 px-4  rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800'>Result</button>
-        <button className='py-2 px-4  rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800'>Attendance</button>
+        <div className="bg-white p-4 rounded-xl mb-10"></div>
+        <button
+          onClick={navigateToQuestions}
+          className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800"
+        >
+          Questions
+        </button>
+        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800">
+          Result
+        </button>
+        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800">
+          Attendance
+        </button>
       </div>
-     
-        </>
-    )
+    </>
+  );
 }
 
-export default BatchDetails ;
+export default BatchDetails;
