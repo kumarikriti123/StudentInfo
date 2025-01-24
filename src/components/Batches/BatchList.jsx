@@ -4,7 +4,7 @@ import { Loader, Placeholder } from 'rsuite';
 import BatchDetails from './BatchDetails';
 
 
-function BatchList(props){
+function BatchList(){
     const [batches, setBatches] = useState([]);
     const [selectedBatch, setSelectedBatch] = useState(null);
     const [loading, setLoading] = useState(true);
