@@ -50,6 +50,13 @@ function BatchDetails({ batchName }) {
   const navigateToQuestions = () => {
     navigate('/subjects', { state: { batchName: batch.batch_name } });
   };
+  
+  const navigateToResult = () => {
+    navigate('/marks');
+  };
+  const navigateToAttendance = () => {
+    navigate('/attendance');
+  };
 
   return (
     <>
@@ -63,10 +70,12 @@ function BatchDetails({ batchName }) {
         >
           Questions
         </button>
-        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800">
+        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800"
+        onClick={navigateToResult}>
           Result
         </button>
-        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800">
+        <button className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white text-lg mx-10 bg-gray-800"
+        onClick={navigateToAttendance}>
           Attendance
         </button>
       </div>

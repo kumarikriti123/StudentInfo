@@ -13,6 +13,7 @@ import { Question } from './components/Question/Question';
 import TopicList from './components/Question/SubjectDetails';
 import Subjects from './components/Question/Subjects';
 import SubjectDetails from './components/Question/SubjectDetails';
+import Attendance from './components/Attendance/Attendance';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,6 +32,8 @@ function App() {
           <Route path="/students" element={<div>Students Page</div>} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/marks" element={<TopicList />} />
+          <Route path="/attendance" element={<Attendance />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>
         <Footer isLoggedIn={isLoggedIn} />
