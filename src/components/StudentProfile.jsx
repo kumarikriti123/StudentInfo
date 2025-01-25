@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { supabase } from '../SupabaseClient';
 import Calendar from 'react-calendar';
 import { format } from 'date-fns';
-import AttendanceList from './AttendenceList';
+import AttendanceList from '../assets/AttendenceList';
 
 function StudentProfile() {
   const { name } = useParams();
