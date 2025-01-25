@@ -48,7 +48,7 @@ function BatchDetails({ batchName }) {
   }
 
   const navigateToQuestions = () => {
-    navigate('/subjects', { state: { batchName: batch.batch_name } });
+    navigate('/batch/question', { state: { batchName: batch.batch_name } });
   };
 
   return (

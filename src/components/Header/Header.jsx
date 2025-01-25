@@ -19,7 +19,7 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
     if (name === "HOME") {
       navigate('/');
     } else if (name === "BATCHES") {
-      navigate('/batch_list');
+      navigate('/batch');
     } else if (name === "STUDENTS") {
       navigate('/students');
     } else if (name === "ABOUT") {
