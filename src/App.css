@@ -12,6 +12,7 @@
   scrollbar-color: transparent ;
 }
 
+
 .scroll_batch_topic {
   display: flex; /* Ensures child elements are arranged horizontally */
   overflow-x: auto; /* Enables horizontal scrolling */
@@ -23,3 +24,4 @@
 .scroll_batch_topic::-webkit-scrollbar {
   display: none; /* Hides scrollbar in Chrome/Safari */
 }
+

@@ -1,6 +1,6 @@
 function Footer(props) {
     return (
-      <footer className={`bg-gray-800 text-white py-6 mt-[80vh] relative  w-full ${props.isLoggedIn ? "" : "mt-[80vh]"}`}>
+      <footer className={`bg-gray-800 text-white py-6 mt-[80vh] relative  w-full ${props.isLoggedIn ? "" : "mt-[40vh]"}`}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center mb-4">
             <div>

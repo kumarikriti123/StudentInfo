@@ -1,9 +1,10 @@
 import imageUrl from '../../assets/image.png';
 
+
 function Attendance (){
     return (
         <>
-        <div className="overflow-x-auto border-2 shadow-lg mx-10 mt-32">
+        <div className="overflow-x-auto border-2 shadow-lg mx-10 top-[15vh] relative">
             <table className="table-auto w-full">
               <thead>
                 <tr className="bg-gray-200 text-center">
@@ -32,10 +33,10 @@ function Attendance (){
                     <td className="p-2 text-center">
                       150
                     </td>
-                    <td className="p-2 text-center text-green-700">
+                    <td className="p-2 text-center font-bold text-green-700">
                       125
                     </td>
-                    <td className="p-2 text-center text-red-700">
+                    <td className="p-2 text-center font-bold text-red-700">
                       25
                     </td>
                 </tr>
