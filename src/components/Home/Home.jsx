@@ -4,7 +4,6 @@ const Home = () => {
   return (
     <div className="font-sans bg-gray-50 relative top-[15vh]">
 
-      {/* About Section */}
       <section id="about" className="py-10 bg-white ">
         <div className="max-w-screen-xl mx-auto px-2">
           <h2 className="text-3xl font-semibold text-red-800">Welcome to Coding Age</h2>
@@ -14,7 +13,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="py-10">
         <div className="max-w-screen-xl mx-auto px-6">
           <h2 className="text-3xl font-semibold text-red-800">Course Features</h2>

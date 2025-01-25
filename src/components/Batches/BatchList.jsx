@@ -10,7 +10,6 @@ function BatchList(){
     const [loading, setLoading] = useState(true);
     const [response, setResponse] = useState('');
     
-
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -78,7 +77,7 @@ function BatchList(){
         {selectedBatch && <BatchDetails batchName={selectedBatch} />}
       </div>
       </div>
-        </> 
+      </> 
       
     )
 }

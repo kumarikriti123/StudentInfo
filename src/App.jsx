@@ -9,11 +9,12 @@ import Home from './components/Home/Home';
 import ContactUsPage from './components/ContactUs/ContactUs';
 import AboutUs from './components/AboutUs/AboutUs';
 import BatchDetails from './components/Batches/BatchDetails';
-import { Question } from './components/Question/Question';
 import Subjects from './components/Question/Subjects';
-
-import SubjectDetails from './components/Question/SubjectDetails';
 import Attendance from './components/Attendance/Attendance';
+import TopicList from './components/Result/TopicList';
+import StudentList from './components/Students/StudentList';
+import StudentProfile from './components/Students/StudentProfile';
+import AttendanceList from './components/Students/AttendenceList';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <p className="text-md text-gray-600 mb-6">Please log in to access this page.</p>
           <a
             href="/login"
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+            className="px-4 py-2 bg-red-800 text-white rounded-lg hover:bg-red-900"
             state={{ from: location }}
           >
             Go to Login
@@ -59,41 +60,34 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setIsLoggedIn={handleLogin} />} />
-          <Route
-            path="/batch"
+          <Route path="/batch"
             element={
               <ProtectedRoute>
                 <BatchList />
               </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/batchdetails"
+            }/>
+          <Route path="/batchdetails"
             element={
               <ProtectedRoute>
                 <BatchDetails />
               </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/batch/question"
+            }/>
+          <Route path="/batch/question"
             element={
               <ProtectedRoute>
                 <Subjects />
               </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/students"
+            }/>
+          <Route path="/students"
             element={
               <ProtectedRoute>
-                <div>Students Page</div>
+                <StudentList />
               </ProtectedRoute>
-            }
-          />
+            }/>
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/marks" element={<TopicList />} />
+          <Route path="/profile/:name" element={<StudentProfile />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { supabase } from '../SupabaseClient';
-import Calendar from 'react-calendar';
-import { format } from 'date-fns';
-import AttendanceList from '../assets/AttendenceList';
+import { supabase } from '../../SupabaseClient';
+import AttendanceList from './AttendenceList';
 
 function StudentProfile() {
   const { name } = useParams();
@@ -260,7 +258,7 @@ function StudentProfile() {
     </div>
   </div>
 </div>
- <AttendanceList/>
+ <AttendanceList />
  </div>
   );
 }

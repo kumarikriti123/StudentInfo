@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from '../SupabaseClient'
+import { supabase } from '../../SupabaseClient'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Placeholder } from "rsuite";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import CustomLoader from "./Loader/Loader";
+import CustomLoader from "../Loader/Loader";
 
 function StudentList() {
   const navigate = useNavigate();
@@ -15,7 +15,6 @@ function StudentList() {
   const [loading, setLoading] = useState(true);
   const imageUrl =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSevnvb5Jkg-tYcpHAtMgXIfGeHrkCI3FeNog&s";
-
   useEffect(() => {
     const fetchData = async () => {
       try {
