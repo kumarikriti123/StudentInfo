@@ -59,7 +59,7 @@ function ContactSupport() {
           </div>
           <button
             type="submit"
-            className="relative left-80 bg-gray-700 text-white px-4 py-2 w-[40%] rounded hover:bg-gray-800 w-full"
+            className="relative left-90 bg-gray-700 text-white px-4 py-2 w-[10vw] rounded hover:bg-gray-800 w-full"
           >
             Send Message
           </button>
