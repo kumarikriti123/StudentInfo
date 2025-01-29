@@ -4,7 +4,7 @@ import imageUrl from '../../assets/image.png';
 function Attendance (){
     return (
         <>
-        <div className="overflow-x-auto border-2 shadow-lg mx-10 top-[15vh] relative">
+        <div className="overflow-x-auto border-2 shadow-lg mx-10 top-[15vh] relative ">
             <table className="table-auto w-full">
               <thead>
                 <tr className="bg-gray-200 text-center">

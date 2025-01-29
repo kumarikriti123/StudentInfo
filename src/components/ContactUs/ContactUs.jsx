@@ -14,7 +14,7 @@ function ContactSupport() {
   };
 
   return (
-    <div className="container flex justify-center items-center bg-gray-50 min-h-screen p-8 -mb-2">
+    <div className="container flex justify-center items-center bg-gray-50 min-h-screen p-8 -mb-[20vh]">
       <div className="bg-white shadow-lg rounded-lg p-8 border  w-full max-w-2xl">
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-6 text-red-700">Contact Support</h2>
@@ -59,7 +59,7 @@ function ContactSupport() {
           </div>
           <button
             type="submit"
-            className="relative left-80 bg-gray-700 text-white px-4 py-2 w-[40%] rounded hover:bg-gray-800 w-full"
+            className="relative left-90 bg-gray-700 text-white px-4 py-2 w-[10vw] rounded hover:bg-gray-800 w-full"
           >
             Send Message
           </button>

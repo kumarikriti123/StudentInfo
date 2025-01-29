@@ -4,7 +4,6 @@ const Home = () => {
   return (
     <div className="font-sans bg-gray-50 relative top-[15vh]">
 
-      {/* About Section */}
       <section id="about" className="py-10 bg-white ">
         <div className="max-w-screen-xl mx-auto px-2">
           <h2 className="text-3xl font-semibold text-red-800">Welcome to Coding Age</h2>
@@ -14,7 +13,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="py-10">
         <div className="max-w-screen-xl mx-auto px-6">
           <h2 className="text-3xl font-semibold text-red-800">Course Features</h2>
@@ -38,7 +36,7 @@ const Home = () => {
         <div className="xl:flex items-center justify-center gap-12 flex-wrap">
         
           <div className="bg-white text-center p-14 rounded-xl shadow-2xl max-w-lg w-full sm:w-1/3 xl:mx-auto">
-            <h1 className="text-6xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
               Coding is the new literacy
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -53,7 +51,7 @@ const Home = () => {
           </div>
 
           <div className="bg-white text-center p-14 rounded-xl shadow-2xl max-w-lg w-full sm:w-1/3 mx-auto">
-            <h1 className="text-6xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
               Join Our Community
             </h1>
             <p className="text-xl text-gray-600 mb-8">

@@ -6,7 +6,7 @@ function TopicList() {
 
   return (
     <>
-    <div className='flex'>
+    <div className='flex mb-[20vh]'>
       <div className="w-48 bg-white z-0 relative top-[15vh] mx-10 text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4">
         <div
           className="py-3 text-xl font-bold mb-2 px-5 cursor-pointer"
