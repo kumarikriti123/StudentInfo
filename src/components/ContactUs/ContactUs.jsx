@@ -14,7 +14,7 @@ function ContactSupport() {
   };
 
   return (
-    <div className="container flex justify-center items-center bg-gray-50 min-h-screen p-8 -mb-2">
+    <div className="container flex justify-center items-center bg-gray-50 min-h-screen p-8 -mb-[20vh]">
       <div className="bg-white shadow-lg rounded-lg p-8 border  w-full max-w-2xl">
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-6 text-red-700">Contact Support</h2>

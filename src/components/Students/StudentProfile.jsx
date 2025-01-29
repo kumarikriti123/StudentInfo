@@ -230,8 +230,6 @@ function StudentProfile() {
       </div>
     </div>
   </div>
-
- 
   <div>
     <button
       className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-400 to-gray-200 font-medium text-black border border-gray-700 rounded-lg transition-all"

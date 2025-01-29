@@ -36,7 +36,7 @@ const Home = () => {
         <div className="xl:flex items-center justify-center gap-12 flex-wrap">
         
           <div className="bg-white text-center p-14 rounded-xl shadow-2xl max-w-lg w-full sm:w-1/3 xl:mx-auto">
-            <h1 className="text-6xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
               Coding is the new literacy
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -51,7 +51,7 @@ const Home = () => {
           </div>
 
           <div className="bg-white text-center p-14 rounded-xl shadow-2xl max-w-lg w-full sm:w-1/3 mx-auto">
-            <h1 className="text-6xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl font-extrabold text-red-900 mb-6 leading-tight tracking-tight">
               Join Our Community
             </h1>
             <p className="text-xl text-gray-600 mb-8">

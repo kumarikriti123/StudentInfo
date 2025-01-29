@@ -35,43 +35,43 @@ const hardcodedAttendanceData = {
         ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], 
         ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], 
         ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       July: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absentt'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absentt'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       August: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       September: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       October: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       November: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
       December: [
-        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'], // Week 1
-        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'], // Week 2
-        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 3
-        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'], // Week 4
+        ['Present', 'Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent'],
+        ['Present', 'Absent', 'Present', 'Present', 'Absent', 'Present', 'Absent'],
+        ['Absent', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
+        ['Present', 'Present', 'Absent', 'Present', 'Present', 'Absent', 'Absent'],
       ],
   };
 

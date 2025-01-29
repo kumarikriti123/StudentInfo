@@ -14,7 +14,6 @@ import Attendance from './components/Attendance/Attendance';
 import TopicList from './components/Result/TopicList';
 import StudentList from './components/Students/StudentList';
 import StudentProfile from './components/Students/StudentProfile';
-import AttendanceList from './components/Students/AttendenceList';
 
 
 function App() {
@@ -37,7 +36,7 @@ function App() {
     return isLoggedIn ? (
       children
     ) : (
-      <div className="flex flex-col items-center justify-center h-screen text-center bg-gray-50">
+      <div className="flex flex-col items-center justify-center h-[80vh] text-center bg-gray-50">
         <div className="p-6 bg-white shadow-md rounded-lg">
           <p className="text-xl font-semibold text-gray-800 mb-4">Access Restricted</p>
           <p className="text-md text-gray-600 mb-6">Please log in to access this page.</p>
@@ -57,7 +56,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header isLoggedIn={isLoggedIn} setIsLoggedIn={handleLogin} />
-        <Routes>
+        <Routes className="min-h-[80vh]">
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setIsLoggedIn={handleLogin} />} />
           <Route path="/batch"
