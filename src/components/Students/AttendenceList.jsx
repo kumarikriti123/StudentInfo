@@ -78,7 +78,7 @@ const hardcodedAttendanceData = {
   const AttendanceList = () => {
     const renderAttendance = () => {
       return Object.entries(hardcodedAttendanceData).map(([month, weeks]) => (
-        <div key={month} className=" bg-gradient-to-r from-gray-300 to-gray-200 w-[370px] rounded-lg shadow-xl shadow-black p-2 border border-gray-600 mb-1 ">
+        <div key={month} className=" bg-gradient-to-r from-gray-300 to-gray-200 lg:w-[370px] w-[330px] rounded-lg shadow-xl shadow-black p-2 border border-gray-600 mb-1 ">
           <h3 className="text-xl font-medium text-red-800 mb-4 text-center">{month}</h3>
   
           
@@ -111,9 +111,9 @@ const hardcodedAttendanceData = {
   
 
   return (
-    <div className="max-w-full mx-auto p-5">
-      <h1 className="text-2xl font-medium text-center text-red-800 mb-6 mt-2"> ATTENDENCE</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-20">
+    <div className="w-full  p-5">
+      <h1 className="text-2xl font-medium text-center text-red-800 "> ATTENDENCE</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-20 ">
         {renderAttendance()}
       </div>
     </div>
