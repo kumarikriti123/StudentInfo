@@ -12,16 +12,15 @@
   scrollbar-color: transparent ;
 }
 
-
-.scroll_batch_topic {
-  display: flex; /* Ensures child elements are arranged horizontally */
-  overflow-x: auto; /* Enables horizontal scrolling */
-  overflow-y: hidden; /* Hides vertical scrolling */
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+.scroll_list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
 }
 
-.scroll_batch_topic::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Chrome/Safari */
+.scroll_list::-webkit-scrollbar {
+  display: none;
 }
-

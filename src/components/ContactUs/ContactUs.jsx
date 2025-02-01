@@ -14,14 +14,13 @@ function ContactSupport() {
   };
 
   return (
-    <div className="container flex justify-center items-center bg-gray-50 min-h-screen p-8 -mb-[20vh]">
-      <div className="bg-white shadow-lg rounded-lg p-8 border  w-full max-w-2xl">
-        <div className="mb-8">
-          <h2 className="text-3xl font-semibold mb-6 text-red-700">Contact Support</h2>
-          <p className="text-base text-gray-700 mb-6">
-            If you have issues or questions, our support team at <span className="font-semibold text-red-600">Coding Age</span> is here to help. Fill out the form, and we will get back to you shortly.
-          </p>
-        </div>
+    <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen px-6 sm:px-8 py-12">
+      <div className="bg-white shadow-lg rounded-lg p-8 border border-gray-200 w-full max-w-2xl">
+        <h2 className="text-3xl font-semibold mb-6 text-red-700 text-center">Contact Support</h2>
+        <p className="text-base text-gray-700 mb-6 text-center">
+          If you have issues or questions, our support team at <span className="font-semibold text-red-600">Coding Age</span> is here to help.
+          Fill out the form, and we will get back to you shortly.
+        </p>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -31,7 +30,7 @@ function ContactSupport() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-red-500"
               required
             />
           </div>
@@ -42,7 +41,7 @@ function ContactSupport() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-red-500"
               required
             />
           </div>
@@ -52,14 +51,14 @@ function ContactSupport() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-red-500"
               rows="4"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="relative left-90 bg-gray-700 text-white px-4 py-2 w-[10vw] rounded hover:bg-gray-800 w-full"
+            className="bg-gray-700 text-white px-4 py-2 rounded-lg w-full hover:bg-gray-800 transition duration-300"
           >
             Send Message
           </button>

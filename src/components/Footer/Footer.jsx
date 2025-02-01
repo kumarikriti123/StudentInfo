@@ -87,8 +87,7 @@ function Footer(props) {
         </div>
 
         <div className="text-center border-t border-gray-600 pt-4 text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} Coding Age. All rights will reserve
-          soon.
+          &copy; {new Date().getFullYear()} Coding Age. All rights are reserved.
         </div>
       </div>
     </footer>

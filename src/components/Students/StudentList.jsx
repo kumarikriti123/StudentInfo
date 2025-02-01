@@ -24,7 +24,6 @@ function StudentList() {
         if (error) {
           console.error("Error Fetching Data", error);
         } else {
-          console.log("Data Fetched", data);
           setStudents(data);
         }
       } catch (err) {
@@ -49,7 +48,6 @@ function StudentList() {
           if (error) {
             console.error("Error Fetching Data", error);
           } else {
-            console.log("Data Fetched", data);
             const batchDetailsMap = data.reduce((acc, batch) => {
               acc[batch.id] = {
                 batch_name: batch.batch_name,

@@ -14,6 +14,8 @@ import Attendance from './components/Attendance/Attendance';
 import TopicList from './components/Result/TopicList';
 import StudentList from './components/Students/StudentList';
 import StudentProfile from './components/Students/StudentProfile';
+import DailySessionReport from './components/DailySessionReport';
+import Test from './components/Test';
 
 
 function App() {
@@ -87,6 +89,8 @@ function App() {
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/marks" element={<TopicList />} />
           <Route path="/profile/:name" element={<StudentProfile />} />
+          <Route path='/dailySessionReport' element={<DailySessionReport />} />
+          <Route path='/test' element={<Test />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>
