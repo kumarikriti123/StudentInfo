@@ -1,7 +1,7 @@
 import logo from '../../assets/codingAge.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import StudentList from '../Students/StudentList';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Header({ isLoggedIn, setIsLoggedIn }) {
   const [headerName, setHeaderName] = useState("HOME");
@@ -42,47 +42,64 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
 
   return (
     <>
-      <div className="flex pl-5 my-5 fixed z-10 bg-white w-full -mt-5 pt-10 pb-5">
-        <img src={logo} alt="CodingAge Logo" className="lg:w-10 lg:h-10 md:w-8 md:h-8 w-10 h-10" />
-        <div className="font-Merriweather font-bold lg:text-2xl md:text-xl ml-2 mt-2 text-red-900">
-          CodingAge
+      <div className="flex justify-between items-center px-5 my-5 fixed z-50 bg-white w-full -mt-5 pt-10 pb-5">
+        <div className="flex items-center z-50">
+          <img src={logo} alt="CodingAge Logo" className="w-10 h-10" />
+          <div className="font-Merriweather font-bold text-xl ml-2 mt-2 text-red-900">
+            CodingAge
+          </div>
+        </div>
+
+        <div className="lg:hidden md:hidden sm:block">
+          <button
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="text-red-900 focus:outline-none"
+          >
+            {isSidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
         </div>
 
         <div className="hidden md:flex md:h-10 xl:h-11 xl:mx-40 md:mx-5 lg:mx-16 bg-gradient-to-r from-red-800 to-red-600 xl:py-2 xl:px-8 lg:py-1 lg:px-4 md:px-2 rounded-2xl font-bold font-Rubik text-white">
-          <button
-            className={`${headerName === "HOME" ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
-            onClick={() => handleMenuItemClick("HOME")}>
-            HOME
-          </button>
-          <button
-            className={`${headerName === "BATCHES" ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
-            onClick={() => handleMenuItemClick("BATCHES")}>
-            BATCHES
-          </button>
-          <button
-            className={`${headerName === "STUDENTS" ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
-            onClick={() => handleMenuItemClick("STUDENTS")}>
-            STUDENTS
-          </button>
-          <button
-            className={`${headerName === "ABOUT" ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
-            onClick={() => handleMenuItemClick("ABOUT")}>
-            ABOUT
-          </button>
-          <button
-            className={`${headerName === "CONTACT US" ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
-            onClick={() => handleMenuItemClick("CONTACT US")}>
-            CONTACT US
-          </button>
+          {["HOME", "BATCHES", "STUDENTS", "ABOUT", "CONTACT US"].map((name) => (
+            <button
+              key={name}
+              className={`${headerName === name ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}
+              onClick={() => handleMenuItemClick(name)}
+            >
+              {name}
+            </button>
+          ))}
         </div>
 
         <button
           onClick={handleLoginLogout}
-          className={`py-2 px-8 relative -right-40 rounded-2xl font-bold font-Rubik text-white ${isLoggedIn ? 'bg-gray-800' : 'bg-gray-800'}`}
+          className="py-2 px-4 rounded-xl font-bold font-Rubik text-white bg-gray-800 hidden md:block"
         >
           {isLoggedIn ? 'LOG OUT' : 'LOG IN'}
         </button>
       </div>
+
+      {isSidebarOpen && (
+        <div className="fixed top-0 left-0 w-64 h-full bg-white z-20 shadow-lg md:hidden sm:w-80">
+          <div className="flex flex-col p-5">
+            {["HOME", "BATCHES", "STUDENTS", "ABOUT", "CONTACT US"].map((name) => (
+              <button
+                key={name}
+                className={`${headerName === name ? 'bg-red-600 text-white ' : ''}mb-3 py-2 px-4 rounded-2xl font-bold font-Rubik text-red-900 hover:bg-red-600 hover:text-white`}
+                onClick={() => handleMenuItemClick(name)}
+              >
+                {name}
+              </button>
+            ))}
+            <button
+              onClick={handleLoginLogout}
+              className="py-2 px-4 rounded-2xl font-bold font-Rubik text-white bg-gray-800 mt-3"
+            >
+              {isLoggedIn ? 'LOG OUT' : 'LOG IN'}
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

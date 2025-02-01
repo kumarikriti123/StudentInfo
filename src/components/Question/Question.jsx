@@ -1,47 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.jpg";
 
-const dynamicData = {
-  topic: "POINTERS",
-  date: "25 Jan 2025",
-  name: "Cage-k3",
-  batch: "Cage-k3",
-};
-
-const questions = [
-  {
-    id: 1,
-    question: "Write a program to declare two integer variable, two pointer that point to that integer and perform addition using pointers",
-    input: "5 3",
-    output: "8",
-  },
-  {
-    id: 2,
-    question: "Print the Array using double pointer.",
-    input: "1 2 3 4 5",
-    output: "Array elements using double pointer:\n1\n2\n3\n4\n5",
-  },
-  {
-    id: 3,
-    question: "Sort Array by using pointer.",
-    input: "2 3 1 5 4",
-    output: "Array elements using pointer:\n1\n2\n3\n4\n5",
-  },
-  {
-    id: 4,
-    question: "Write a program to reverse an integer array of size 5 using a pointer. The pointer should point to the array and iterate through it for reversal.",
-    input: "1 2 3 4 5",
-    output: "Reversed array:\n5 4 3 2 1",
-  },
-  {
-    id: 5,
-    question: "Create a program to use a pointer to a function. Implement two functions (add and subtract) and use a function pointer to call one of them based on user input.",
-    input: "Choose operation:\n1. Add\n2. Subtract\n\nEnter option : 2\nEnter two numbers: 10 5",
-    output: "Result: 15",
-  },
-];
-
-const Question = () => {
+const Question = ({ selectedTopic, selectedSubject, questions }) => {
   return (
     <div className="min-h-screen bg-gray-50 p-5">
       <header className="flex items-center gap-4 mb-10">
@@ -56,16 +16,10 @@ const Question = () => {
         <h2 className="text-2xl font-bold mb-5">Test Details</h2>
         <div className="grid grid-cols-2 gap-4 text-lg">
           <div>
-            <strong>Topic:</strong> {dynamicData.topic}
+            <strong>Subject:</strong> {selectedSubject}
           </div>
           <div>
-            <strong>Date:</strong> {dynamicData.date}
-          </div>
-          <div>
-            <strong>Name:</strong> {dynamicData.name}
-          </div>
-          <div>
-            <strong>Batch:</strong> {dynamicData.batch}
+            <strong>Topic:</strong> {selectedTopic}
           </div>
         </div>
       </section>
