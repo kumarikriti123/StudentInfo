@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { supabase } from '../SupabaseClient';
-import Calendar from 'react-calendar';
-import { format } from 'date-fns';
-import AttendanceList from '../assets/AttendenceList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faEye} from "@fortawesome/free-solid-svg-icons";
 
 function StudentProfile() {
   const { name } = useParams();
   const [students, setStudents] = useState([]); 
   const [batchDetails, setBatchDetails] = useState({}); 
   const [activeSubject, setActiveSubject] = useState(null);
-  const imgurl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMuxbu7ivgBVDvQcqfmIWwIn2tMReKsskxlQ&s";
+  const navigate= useNavigate();
+  
+  const goToAttendenceList=()=>{
+    navigate('/AttendenceList');
+  };
 
   const toggleSubject = (subject) => {
     if (activeSubject === subject) {
@@ -40,17 +42,17 @@ function StudentProfile() {
   if (!user) return <div>Student not found</div>;
 
   return (
-    <div className=" bg-white p-10 top-[15vh] relative mx-auto">
-  <div className="bg-gradient-to-r from-gray-400 to-gray-200 p-6 rounded-lg lg:flex flex-row items-center shadow-lg shadow-black ">
+    <div className=" bg-white p-10 top-[15vh] relative mx-auto ">
+  <div className="bg-gradient-to-r from-gray-300 to-gray-400 p-6 rounded-lg lg:flex flex-row items-center shadow-lg shadow-black ">
     <img 
-      src={imgurl || 'defaultImagePath'}
+      src={user.photo_url || 'defaultImagePath'}
       alt="student pic" 
-      className="rounded-lg lg:w-[250px] lg:h-[250px] w-[300px] h-[250px] my-auto " 
+      className="rounded-full lg:w-[250px] lg:h-[250px] w-[30vw] h-[20vh] my-auto  " 
     />
-    <div className="lg:ml-14  ">
+    <div className="lg:ml-14 -ml-4">
       <div className="lg:text-base text-xl font-medium text-black mt-4 flex">Name:{user.name || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Phone Number: {user.phone_number || "N/A"}</div>
-      <div className="lg:text-base text-xl font-medium text-black mt-2">Email: {user.email || "N/A"}</div>
+      <div className="lg:text-base text-xl font-medium text-black mt-2  ">Email: {user.email || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Parent's Phone Number: {user.parent_number || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Course: {user.course || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Batch ID: {user.batch_id || "N/A"}</div>
@@ -63,7 +65,7 @@ function StudentProfile() {
   
   <div className="mb-3 mt-1">
     <button
-      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-400 to-gray-200  text-black font-medium border border-gray-700 rounded-lg  transition-all"
+      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-300 to-gray-400  text-black font-medium border border-gray-700 rounded-lg  transition-all"
       onClick={() => toggleSubject('C')}
     >
       C
@@ -161,7 +163,7 @@ function StudentProfile() {
   
   <div className="mb-4">
     <button
-      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-400 to-gray-200 text-black font-medium border border-gray-700 rounded-lg  transition-all"
+      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-300 to-gray-400 text-black font-medium border border-gray-700 rounded-lg  transition-all"
       onClick={() => toggleSubject('Java')}
     >
       JAVA
@@ -209,7 +211,7 @@ function StudentProfile() {
   
   <div className="mb-4">
     <button
-      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-400 to-gray-200 text-black font-medium border  border-gray-700 rounded-lg  transition-all"
+      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-300 to-gray-400 text-black font-medium border  border-gray-700 rounded-lg  transition-all"
       onClick={() => toggleSubject('GitHub')}
     >
       GITHUB
@@ -236,7 +238,7 @@ function StudentProfile() {
  
   <div>
     <button
-      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-400 to-gray-200 font-medium text-black border border-gray-700 rounded-lg transition-all"
+      className="w-full flex justify-between items-center px-4 py-1 text-base sm:text-xl bg-gradient-to-r from-gray-300 to-gray-400 font-medium text-black border border-gray-700 rounded-lg transition-all"
       onClick={() => toggleSubject('DSA')}
     >
       DSA
@@ -260,7 +262,45 @@ function StudentProfile() {
     </div>
   </div>
 </div>
- <AttendanceList/>
+<div className='text-center bg-gradient-to-r from-gray-300 to-gray-400 mt-7 text-base text-black rounded-md border border-gray-500 p-3 w-[330px] lg:w-full md:w-full '>
+  <div className='text-red-900 font-medium text-xl py-2'>
+  ATTENDENCE
+  </div>
+  
+    <div className='flex justify-between ' >
+    <div className='px-1 '>
+      TOTAL CLASS
+      <div>120</div>
+    </div>
+    <div className='px-1'>
+      ABSENT
+      <div>
+        60
+      </div>
+    </div>
+    <div className='px-1'>
+      PRESENT
+      <div>
+        60
+      </div>
+    </div>
+    <div className='px-1'>
+      PERCENTAGE
+      <div>
+        50%
+      </div>
+    </div>
+    <div className='px-1'>
+      VIEW
+      <div>
+    <button onClick={goToAttendenceList}>
+    <FontAwesomeIcon icon={faEye} className='w-16 h-6' />
+    </button>
+    </div>
+    </div>
+    </div>
+  </div>
+
  </div>
   );
 }
