@@ -42,7 +42,7 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
 
   return (
     <>
-      <div className="flex justify-between items-center px-5 my-5 fixed z-50 bg-white w-full -mt-5 pt-10 pb-5">
+      <div className="flex justify-between items-center px-5  fixed top-0 left-0 z-50 bg-white w-full  pt-10 pb-5 ">
         <div className="flex items-center z-50">
           <img src={logo} alt="CodingAge Logo" className="w-10 h-10" />
           <div className="font-Merriweather font-bold text-xl ml-2 mt-2 text-red-900">
