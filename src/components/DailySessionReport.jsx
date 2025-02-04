@@ -15,7 +15,7 @@ function DailySessionReport() {
   }, [selectedSubject]);
 
   return (
-    <div className="flex flex-col w-full p-4 md:pt-28">
+    <div className="flex flex-col w-full p-4 -mt-24 md:pt-28">
       <div className="md:hidden w-full bg-white text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4">
         <div className="text-center font-bold text-3xl mb-4">Coding Age</div>
 
@@ -25,7 +25,7 @@ function DailySessionReport() {
               onClick={() => setSubjectDropdownOpen(!subjectDropdownOpen)}
               className="w-full py-2 px-5 text-xl font-bold bg-gray-200 rounded-lg"
             >
-              {selectedSubject || "Subject"}
+              {`Subject : ${selectedSubject}`}
             </button>
             {subjectDropdownOpen && (
               <div className="absolute w-full bg-white border-2 border-slate-400 rounded-lg shadow-lg mt-2 z-10">
@@ -40,7 +40,7 @@ function DailySessionReport() {
                       selectedSubject === subject ? "bg-gray-200 shadow-lg" : ""
                     }`}
                   >
-                    {subject}
+                    {`Subject : ${selectedSubject}`}
                   </div>
                 ))}
               </div>
@@ -52,7 +52,7 @@ function DailySessionReport() {
               onClick={() => setTopicDropdownOpen(!topicDropdownOpen)}
               className="w-full py-2 px-5 text-xl font-bold bg-gray-200 rounded-lg"
             >
-              {selectedTopic || "Topic"}
+              {`Topic : ${selectedTopic}`}
             </button>
             {topicDropdownOpen && (
               <div className="absolute w-full bg-white border-2 border-slate-400 rounded-lg shadow-lg mt-2 z-10">

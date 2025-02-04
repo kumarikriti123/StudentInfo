@@ -7,16 +7,16 @@ import { useNavigate } from 'react-router-dom';
 
 
 export const Card = ({ data}) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   navigate("../batchDetail/BatchDetail.jsx");
-  // };
+  const handleClick = () => {
+    navigate("../batchDetail/Student.jsx");
+  };
   return (
     
     
     <div className={`max-h-full w-[90%] md:max-h-full md:w-[43%]  lg:w-[30%] bg-gradient-to-r from-gray-300 to-gray-400 rounded-xl block flex-wrap mx-4 my-4 shadow md:inline-block transition-all duration-300 hover:scale-101 hover:shadow-black hover:shadow-lg`}
-    // onClick={handleClick}
+    onClick={handleClick}
     >
       <div className="flex justify-between">
         <p className="font-semibold m-1 text-sm  rounded-xl p-1 ">{data.date}</p>

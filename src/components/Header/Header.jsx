@@ -32,6 +32,9 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
       case "ABOUT":
         navigate('/about');
         break;
+      case "DASHBOARD":
+        navigate('/dashboard');
+        break;
       case "CONTACT US":
         navigate('/contact');
         break;
@@ -60,7 +63,7 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
         </div>
 
         <div className="hidden md:flex md:h-10 xl:h-11 xl:mx-40 md:mx-5 lg:mx-16 bg-gradient-to-r from-red-800 to-red-600 xl:py-2 xl:px-8 lg:py-1 lg:px-4 md:px-2 rounded-2xl font-bold font-Rubik text-white">
-          {["HOME", "BATCHES", "STUDENTS", "ABOUT", "CONTACT US"].map((name) => (
+          {["HOME", "BATCHES", "STUDENTS","DASHBOARD", "ABOUT", "CONTACT US"].map((name) => (
             <button
               key={name}
               className={`${headerName === name ? 'bg-white text-black ' : ''}mr-3 xl:px-4 lg:px-2 py-1 hover:bg-white rounded-2xl hover:text-black`}

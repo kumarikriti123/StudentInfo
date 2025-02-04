@@ -15,7 +15,7 @@ function Test() {
   }, [selectedSubject]);
 
   return (
-    <div className="flex flex-col w-full p-4 md:pt-28">
+    <div className="flex flex-col w-full p-4 -mt-24 md:pt-28">
       <div className="md:hidden w-full bg-white text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4">
         <div className="text-center font-bold text-3xl mb-4">Coding Age</div>
 

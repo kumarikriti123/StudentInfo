@@ -16,7 +16,7 @@ import StudentList from './components/Students/StudentList';
 import StudentProfile from './components/Students/StudentProfile';
 import DailySessionReport from './components/DailySessionReport';
 import Test from './components/Test';
-import { BatchDetail } from './components/ab/batchDetail/BatchDetail';
+import { Student } from './components/ab/batchDetail/Student';
 import { Dashboard } from './components/ab/dashboard/Dashboard';
 
 
@@ -96,7 +96,8 @@ function App() {
           <Route path="/attendance" element={<Attendance />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/batchDetail/:batchId' element={<BatchDetail />} />
+          <Route path='/batchDetail/:batchId' element={<Student />} />
+          {/* <Route path='/batchDetail/student' element={<Student />} /> */}
         </Routes>
         <Footer isLoggedIn={isLoggedIn} />
       </BrowserRouter>
