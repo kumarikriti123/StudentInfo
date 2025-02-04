@@ -6,6 +6,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Placeholder } from "rsuite";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import CustomLoader from "../Loader/Loader";
+import StudentProfile from "./StudentProfile";
 
 function StudentList() {
   const navigate = useNavigate();
@@ -138,7 +139,7 @@ function StudentList() {
                           <span>Profile</span>
                           <FontAwesomeIcon icon={faArrowRightLong} className="ml-3 text-xl align-middle animate-arrow" />
                         </button>
-                      </td>  
+                      </td>
                     </tr>
                   ))
                 ) : (

@@ -4,9 +4,9 @@ import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import dummyData from "../Data/data";
-import Attendance from "../../Attendance/Attendance";
 import Test from "../../Test";
 import DailySessionReport from "../../DailySessionReport";
+import StudentBatchAttendence from "../../Attendance/StudentBatchAttendence";
 
 export const Student = () => {
   const { batchId } = useParams();
@@ -65,7 +65,7 @@ export const Student = () => {
         </div>
       )}
       {activeTab === "topics" && <DailySessionReport batchId={batchId} />}
-      {activeTab === "attendance" && <Attendance batchId={batchId} />}
+      {activeTab === "attendance" && <StudentBatchAttendence batchId={batchId} />}
       {activeTab === "test" && <Test batchId={batchId} />}
     </div>
   );

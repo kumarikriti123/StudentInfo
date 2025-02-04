@@ -2,9 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import AttendanceList from './AttendenceList';
 import { useEffect, useState } from 'react';
-import { supabase } from '../SupabaseClient';
+import { supabase } from '../../SupabaseClient';
 
 function StudentBatchAttendence() {
     const navigate= useNavigate();
@@ -14,7 +13,7 @@ function StudentBatchAttendence() {
     const [filteredStudents, setFilteredStudents] = useState([])
 
     const goToAttendenceList=()=>{
-        navigate('/AttendenceList');
+        navigate('/attendence');
       };
 
       useEffect(() => {

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../SupabaseClient';
-import AttendanceList from './AttendenceList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye} from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from 'react-router-dom';
+import AttendanceList from './AttendenceList';
 
 function StudentProfile() {
   const { name } = useParams();
@@ -13,7 +14,7 @@ function StudentProfile() {
   const navigate= useNavigate();
   
   const goToAttendenceList=()=>{
-    navigate('/AttendenceList');
+    navigate('/Attendence');
   };
 
   const toggleSubject = (subject) => {
@@ -262,14 +263,13 @@ function StudentProfile() {
     </div>
   </div>
 </div>
-<AttendanceList />
 
-<div className='text-center bg-gradient-to-r from-gray-300 to-gray-400 mt-7 text-base text-black rounded-md border border-gray-500 p-3 w-[330px] lg:w-full md:w-full '>
+<div className='text-center bg-gradient-to-r from-gray-300 to-gray-400 mt-7 text-base text-black rounded-md border border-gray-500 p-3 w-[330px] lg:w-full md:w-full mb-8'>
   <div className='text-red-900 font-medium text-xl py-2'>
   ATTENDENCE
   </div>
   
-    <div className='flex justify-between ' >
+    <div className='flex justify-between' >
     <div className='px-1 '>
       TOTAL CLASS
       <div>120</div>

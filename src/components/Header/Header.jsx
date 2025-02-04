@@ -85,7 +85,7 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
       {isSidebarOpen && (
         <div className="fixed top-0 left-0 w-64 h-full bg-white z-20 shadow-lg md:hidden sm:w-80">
           <div className="flex flex-col p-5">
-            {["HOME", "BATCHES", "STUDENTS", "ABOUT", "CONTACT US"].map((name) => (
+            {["HOME", "BATCHES", "STUDENTS", "DASHBOARD", "ABOUT", "CONTACT US"].map((name) => (
               <button
                 key={name}
                 className={`${headerName === name ? 'bg-red-600 text-white ' : ''}mb-3 py-2 px-4 rounded-2xl font-bold font-Rubik text-red-900 hover:bg-red-600 hover:text-white`}
