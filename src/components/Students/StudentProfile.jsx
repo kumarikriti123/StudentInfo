@@ -4,10 +4,10 @@ import { supabase } from '../../SupabaseClient';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from 'react-router-dom';
-import AttendanceList from './AttendenceList';
 
 function StudentProfile() {
   const { name } = useParams();
+  console.log(name);
   const [students, setStudents] = useState([]); 
   const [batchDetails, setBatchDetails] = useState({}); 
   const [activeSubject, setActiveSubject] = useState(null);
@@ -55,7 +55,7 @@ function StudentProfile() {
     <div className="lg:ml-14 -ml-4">
       <div className="lg:text-base text-xl font-medium text-black mt-4 flex">Name:{user.name || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Phone Number: {user.phone_number || "N/A"}</div>
-      <div className="lg:text-base text-xl font-medium text-black mt-2  ">Email: {user.email || "N/A"}</div>
+      <div className="lg:text-base text-xl font-medium text-black mt-2">Email: {user.email || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Parent's Phone Number: {user.parent_number || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Course: {user.course || "N/A"}</div>
       <div className="lg:text-base text-xl font-medium text-black mt-2">Batch ID: {user.batch_id || "N/A"}</div>
@@ -306,3 +306,4 @@ function StudentProfile() {
   );
 }
 export default StudentProfile;
+

@@ -108,22 +108,22 @@ function StudentList() {
           </div>
         </div>
         <div className="pt-4 sm:pt-16 lg:pt-3"> 
-          <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-100px)]">
-            <table className="w-full bg-gradient-to-r from-gray-400 to-gray-300 mx-auto">
+          <div className="overflow-x-auto overflow-y-auto">
+            <table className="w-full bg-white mx-auto">
               <thead>
-                <tr className="bg-gradient-to-r from-red-500 to-red-800 text-white py-4 ">
-                  <th className="py-2 px-4">S NO.</th>
-                  <th className="py-2 px-4">Photo</th>
-                  <th className="py-2 px-4">Name</th>
-                  <th className="py-2 px-4">Contact</th>
-                  <th className="py-2 px-4">Batch</th>
-                  <th className="py-2 px-4">Action</th>
+                <tr className="bg-gradient-to-r from-red-500 to-red-800 text-white">
+                  <th className="py-6 px-4">S NO.</th>
+                  <th className="py-6 px-4">Photo</th>
+                  <th className="py-6 px-4">Name</th>
+                  <th className="py-6 px-4">Contact</th>
+                  <th className="py-6 px-4">Batch</th>
+                  <th className="py-6 px-4">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredStudents.length > 0 ? (
                   filteredStudents.map((student, index) => (
-                    <tr key={student.id} className="text-black border-b last:border-b-0">
+                    <tr key={student.id} className="text-black border-b last:border-b-0 hover:bg-gray-100">
                       <td className="py-2 px-4 text-center align-middle">{index + 1 || 'N/A'}</td>
                       <td className="py-2 px-4 text-center align-middle flex justify-center items-center">
                         <img src={student.photo_url} alt="User" className="w-15 h-14 object-cover rounded-full" />

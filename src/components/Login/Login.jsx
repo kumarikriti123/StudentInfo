@@ -23,13 +23,13 @@ function Login({ setIsLoggedIn }) {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-100 pt-24">
+    <div className="flex justify-center items-center bg-gray-100 pt-24 mt-28">
       <div className="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-10"></div>
 
       <div className="bg-white p-8 rounded-lg sm:w-96 z-20 relative">
         <button
           onClick={handleClose}
-          className="absolute top-2 right-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-2 rounded-full"
+          className="absolute top-2 right-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900 px-2 rounded-full"
         >
           x
         </button>

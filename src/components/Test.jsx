@@ -1,6 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { subjects, topicsBySubject } from "./Question/SubjectsTopicsData";
 
+const studentData = [
+  {
+    id: 1,
+    name: "Manjeet Kumar",
+    marks: 85,
+    fullMarks: 100,
+    percentage: "85%",
+    grade: "A",
+  },
+  {
+    id: 2,
+    name: "Rohit Sharma",
+    marks: 78,
+    fullMarks: 100,
+    percentage: "78%",
+    grade: "B+",
+  },
+  {
+    id: 3,
+    name: "Priya Singh",
+    marks: 92,
+    fullMarks: 100,
+    percentage: "92%",
+    grade: "A+",
+  },
+  {
+    id: 4,
+    name: "Aman Verma",
+    marks: 60,
+    fullMarks: 100,
+    percentage: "60%",
+    grade: "C",
+  },
+];
+
 function Test() {
   const [selectedSubject, setSelectedSubject] = useState("C");
   const [selectedTopic, setSelectedTopic] = useState(null);
@@ -15,10 +50,8 @@ function Test() {
   }, [selectedSubject]);
 
   return (
-    <div className="flex flex-col w-full p-4 -mt-24 md:pt-28">
+    <div className="flex flex-col w-full p-4  md:pt-28">
       <div className="md:hidden w-full bg-white text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4">
-        <div className="text-center font-bold text-3xl mb-4">Coding Age</div>
-
         <div className="flex w-full gap-2">
           <div className="relative w-1/2">
             <button
@@ -76,26 +109,29 @@ function Test() {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col items-center w-full">
+      <div className="hidden md:flex flex-col md:-mt-24 items-center w-full">
         <div className="scroll_list mt-2 p-2 border-2 border-gray-300 rounded-xl shadow-lg">
-          <div className="flex gap-3 w-max">
+          <div className="flex gap-3 w-full">
             <div className="py-2 px-4 text-lg font-bold bg-gray-800 text-white rounded-lg whitespace-nowrap">
               {`Subject : ${selectedSubject}`}
             </div>
             <div className="h-11 w-0.5 bg-red-950"></div>
-            {subjects.map((subject, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedSubject(subject)}
-                className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
-                  selectedSubject === subject
-                    ? "bg-gray-800 text-white"
-                    : "bg-gray-200 hover:bg-gray-300"
-                }`}
-              >
-                {subject}
-              </button>
-            ))}
+            <div className="flex gap-3 overflow-x-auto scroll_list">
+              {subjects.map((subject, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedSubject(subject)}
+                  className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
+                    selectedSubject === subject
+                      ? "bg-gray-800 text-white cursor-default"
+                      : "bg-gray-200 hover:bg-gray-300"
+                  }`}
+                  disabled={selectedSubject === subject}
+                >
+                  {subject}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -112,9 +148,10 @@ function Test() {
                   onClick={() => setSelectedTopic(topic)}
                   className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
                     selectedTopic === topic
-                      ? "bg-gray-800 text-white"
+                      ? "bg-gray-800 text-white cursor-default"
                       : "bg-gray-200 hover:bg-gray-300"
                   }`}
+                  disabled={selectedTopic === topic}
                 >
                   {topic}
                 </button>
@@ -124,23 +161,24 @@ function Test() {
         </div>
       </div>
 
-      <div className="w-full flex mt-5 bg-white justify-center items-center relative">
+      <div className="w-full flex flex-col justify-center items-center mt-5 bg-white relative">
         <div
-          className="absolute top-0 centre transform rotate-[-10deg] bg-yellow-500 text-white text-xs font-bold px-2 py-1"
+          className="absolute top-0 left-1/2 -translate-x-1/2 transform rotate-[-10deg] bg-yellow-500 text-white text-xs font-bold px-3 py-1"
           style={{ zIndex: 10 }}
         >
           Topper
         </div>
+
         <div
-          className="bg-red-700 text-white text-3xl font-bold flex-shrink-0 px-8 py-4 transition-all duration-300 ease-in-out hover:bg-red-800
-    sm:w-4/5 sm:text-xl sm:px-6 sm:py-3 md:w-3/4 md:text-2xl lg:w-auto lg:text-3xl"
+          className="bg-red-700 text-white font-bold text-center flex-shrink-0 px-6 py-3 transition-all duration-300 ease-in-out hover:bg-red-800
+    sm:px-8 sm:py-4 sm:text-xl md:px-10 md:py-5 md:text-2xl lg:px-12 lg:py-6 lg:text-3xl"
           style={{ clipPath: "polygon(1% 25%, 100% 0%, 100% 75%, 0% 100%)" }}
         >
-          <p>{`Manjeet Kumar`}</p>
+          <p>Manjeet Kumar</p>
         </div>
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex h-28 justify-center hidden md:flex">
         <div className="md:px-8 bg-gray-800 w-[95vw] text-white my-6 rounded-lg transition-transform transform flex flex-col md:flex-row gap-4">
           <div className="flex h-12 mr-5 items-center justify-center text-white text-2xl font-medium opacity-0">
             1.

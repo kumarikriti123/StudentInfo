@@ -14,7 +14,7 @@ function ContactSupport() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen px-6 sm:px-8 py-12">
+    <div className="mt-10 flex flex-col items-center justify-center bg-gray-50 min-h-screen px-6 sm:px-8 py-12">
       <div className="bg-white shadow-lg rounded-lg p-8 border border-gray-200 w-full max-w-2xl">
         <h2 className="text-3xl font-semibold mb-6 text-red-700 text-center">Contact Support</h2>
         <p className="text-base text-gray-700 mb-6 text-center">

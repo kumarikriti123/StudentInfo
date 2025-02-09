@@ -1,7 +1,7 @@
 function Footer(props) {
   return (
     <footer
-      className={`bg-gray-800 text-white py-6 mt-[10vh] relative  w-full px-10 ${
+      className={`bg-gray-800 text-white py-6 mt-[10vh] relative  w-[100%] px-10 h-auto ${
         props.isLoggedIn ? "" : ""
       }`}
     >

@@ -24,9 +24,7 @@ function SubjectsWithTopics() {
 
   return (
     <div className="flex flex-col w-full p-4 md:pt-28">
-
       <div className="md:hidden w-full bg-white text-black text-2xl border-2 border-slate-400 rounded-xl shadow-xl p-4">
-        
         <div className="text-center font-bold text-3xl mb-4">Coding Age</div>
 
         <div className="flex w-full gap-2">
@@ -35,7 +33,7 @@ function SubjectsWithTopics() {
               onClick={() => setSubjectDropdownOpen(!subjectDropdownOpen)}
               className="w-full py-2 px-5 text-xl font-bold bg-gray-200 rounded-lg"
             >
-              {selectedSubject || "Subject"}
+              {selectedSubject}
             </button>
             {subjectDropdownOpen && (
               <div className="absolute w-full bg-white border-2 border-slate-400 rounded-lg shadow-lg mt-2 z-10">
@@ -88,43 +86,64 @@ function SubjectsWithTopics() {
 
       <div className="hidden md:flex flex-col items-center w-full">
         <div className="scroll_list mt-2 p-2 border-2 border-gray-300 rounded-xl shadow-lg">
-          <div className="flex gap-3 w-max">
-            {subjects.map((subject, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedSubject(subject)}
-                className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
-                  selectedSubject === subject ? "bg-gray-800 text-white" : "bg-gray-200 hover:bg-gray-300"
-                }`}
-              >
-                {subject}
-              </button>
-            ))}
+          <div className="flex gap-3 w-full">
+            <div className="py-2 px-4 text-lg font-bold bg-gray-800 text-white rounded-lg whitespace-nowrap">
+              {`Subject : ${selectedSubject}`}
+            </div>
+            <div className="h-11 w-0.5 bg-red-950"></div>
+            <div className="flex gap-3 overflow-x-auto scroll_list">
+              {subjects.map((subject, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedSubject(subject)}
+                  className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
+                    selectedSubject === subject
+                      ? "bg-gray-800 text-white cursor-default"
+                      : "bg-gray-200 hover:bg-gray-300"
+                  }`}
+                  disabled={selectedSubject === subject}
+                >
+                  {subject}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="scroll_list mt-4 p-2 border-2 border-gray-300 rounded-xl shadow-lg">
-          <div className="flex gap-3 w-max">
-            {topicsBySubject[selectedSubject]?.map((topic, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedTopic(topic)}
-                className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
-                  selectedTopic === topic ? "bg-gray-800 text-white" : "bg-gray-200 hover:bg-gray-300"
-                }`}
-              >
-                {topic}
-              </button>
-            ))}
+        <div className="scroll_list mt-4 p-2 border-2 border-gray-300 rounded-xl shadow-lg z-0">
+          <div className="flex gap-3 w-full">
+            <div className="py-2 px-4 text-lg font-bold bg-gray-800 text-white rounded-lg whitespace-nowrap">
+              {`Topic : ${selectedTopic}`}
+            </div>
+            <div className="h-11 w-0.5 bg-red-950"></div>
+            <div className="flex gap-3 w-max overflow-x-auto scroll_list">
+              {topicsBySubject[selectedSubject]?.map((topic, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedTopic(topic)}
+                  className={`py-2 px-4 text-lg font-bold rounded-lg transition min-w-fit ${
+                    selectedTopic === topic
+                      ? "bg-gray-800 text-white cursor-default"
+                      : "bg-gray-200 hover:bg-gray-300"
+                  }`}
+                  disabled={selectedTopic === topic}
+                >
+                  {topic}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       <div className="w-full mt-6">
         <h2 className="text-2xl font-bold text-center">Question Paper</h2>
-        <Question selectedTopic={selectedTopic} questions={questions} selectedSubject={selectedSubject}/>
+        <Question
+          selectedTopic={selectedTopic}
+          questions={questions}
+          selectedSubject={selectedSubject}
+        />
       </div>
-
     </div>
   );
 }

@@ -9,7 +9,7 @@
 .scroll_batch{
   scrollbar-width: none;
   -ms-overflow-style: none; 
-  scrollbar-color: transparent ;
+  scrollbar-color: transparent;
 }
 
 .scroll_list {
